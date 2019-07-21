@@ -1,15 +1,10 @@
-import os
-from flask import Flask, jsonify, request
-from requests import Request
+from flask import Flask
 
 app = Flask(__name__)
 
-@app.route('/get_files', methods=['GET'])
-def get_files():
-    """
-    Pega a lista de arquivos na Caixa Postal
-    """
-    return 'hello world'
+@app.route('/', methods=['GET'])
+def hello_world():
+    return 'Hello World!'
 
 if __name__ == '__main__':
     app.run(debug=True,host='0.0.0.0')
